@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% if form.errors %}
+    <p>there's something wrong</p>
+    {% endif %}
+
+    {% if next %}
+    <p>hey you can't access that page</p>
+    {% endif %}
+    
+      <div class="jumbotron">
+    <h1>My fake blog!</h1>
+    {% if user.is_authenticated %}
+      <p>Logged as {{ user.username }}</p>
+      <a class="btn btn-primary" href="{% url 'logout' %}">Logout</a>
+    {% else %}
+      <button class="googele" href="{% url 'social:begin' 'google-oauth2' %}">
+        Login
+      </button>
+    {% endif %}
+
+    <form  action="{% url "login" %}" method="post">
+      {% csrf_token %}
+
+      <p>username: {{ form.username }}</p>
+      <p>password: {{ form.password }}</p>
+
+      <p><input type="submit"  value="login"></p>
+      <input type="hidden" name="next" value="{{ next }}">
+    </form>
+{% endblock %}

@@ -1,0 +1,35 @@
+*{
+  box-sizing: border-box;
+}
+
+html, body{
+  margin: 0;
+  padding: 0;
+}
+.main-header{
+  background-color: #8FBC8F	;
+  height: 100px;
+  width: auto;
+  background-blend-mode: multiply;
+}
+.main-nav li{
+}
+.nav ul {
+  display: inline-block;
+  margin-right: 0;
+}
+.nav li{
+  display: inline;
+  padding: 4px;
+  color: white;
+}
+.header-ul{
+  padding-left: 700px;
+}
+.logo{
+  color: white;
+  padding-left: 10px;
+}
+.active a{
+  color: black;
+}

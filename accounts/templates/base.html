@@ -1,0 +1,88 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet"
+     type="text/css" href="{% static 'accounts/style.css' %}">
+  </head>
+  <body>
+    <header class="o main-header">
+      <nav class="nav main-nav">
+        <span class="logo">Bookmarks</span>
+        {% if user.is_authenticated %}
+        <ul class="header-ul">
+            <li {% if section == "dashboard" %}class="active" {% endif %}><a href="{% url "accounts:dashboard" %}">Dashbord</a></li>
+            <li {% if section == "images" %}class="active" {% endif %}><a href="{% url "images:list" %}">Images</a></li>
+            <li {% if section == "people" %}class="active" {% endif %}><a href="{% url "user_list" %}">People</a></li>
+            <li><a href="{% url "logout" %}">logout</a></li>
+        </ul>
+        {% else %}
+        <ul>
+          <li ><a href="{% url "login" %}">login</a></li>
+        </ul>
+        {% endif %}
+      </nav>
+    </header>
+
+    <main>
+
+      {% if messages %}
+        <ul class="messages">
+          {% for message in messages %}
+           <li{% if message.tags %} class="{{ message.tags }}"{%   endif %}>{{ message }}</li>
+          {% empty %}
+            <li></li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+
+      <p>{{user.username}}</p>
+      {% block content %}
+      {% endblock %}
+    </main>
+
+    <footer>
+
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <script>
+    function getCookie(name) {
+    var cookieValue = null;
+    if (document.cookie && document.cookie !== '') {
+        var cookies = document.cookie.split(';');
+        for (var i = 0; i < cookies.length; i++) {
+            var cookie = jQuery.trim(cookies[i]);
+            // Does this cookie string begin with the name we want?
+            if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                break;
+                }
+            }
+        }
+        return cookieValue;
+      }
+
+      var csrftoken = getCookie('csrftoken');
+
+      function csrfSafeMethod(method) {
+        // these HTTP methods do not require CSRF protection
+        return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
+      }
+      $.ajaxSetup({
+        beforeSend: function(xhr, settings) {
+            if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
+                xhr.setRequestHeader("X-CSRFToken", csrftoken);
+            }
+        }
+});
+        $(document).ready(function(){
+            {% block domready %}
+            {% endblock %}
+		});
+    </script>
+    </body>
+</html>
