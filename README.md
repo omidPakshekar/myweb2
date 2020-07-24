@@ -1,25 +1,39 @@
-# Team Members:
-- omid pakshekar 960122681009
-- seyed hossein mirhosseiny 960122680028
+# Implementation of an Age Prediction Application using Deep Neural Networks
+
+## Team Members:
+- Seyyed Hossein Mirhosseini (960122680028)
+- Omid Pakshekar (960122681009)
 
 # Age Predictor Application 
-this project leverages deep learning to predic person's age in a photo.
-we write 2 project keras and opencv
+This project predicts a person's age in a photo or video.
+We wrote two models for this project, one with keras and the other with opencv
 
+# Age_net.caffemodel
+  This is the model that you must download before running AgeDetection_(Using CV) 
+  
+# Report File
+  https://drive.google.com/file/d/1l42Li3yBtA841ZpT9P6p1kf1QnFc0sZx/view?usp=sharing
+
+# Video(Report)
+  https://drive.google.com/file/d/1Cw-KK7q-mIRxlWMbn-ygpfBFsnJFHtl6/view?usp=sharing
+  
+# Optional Report
+  Here are some things that we did but didn't succeed(This is optional to see)
+  
 ## Data
- we combined these four datasets and used panda to analyz the data
+we combined these four datasets and for imdb we use panda to analyze the data
 - imdb https://data.vision.ee.ethz.ch/cvl/rrothe/imdb-wiki/
 - https://www.kaggle.com/mariafrenti/age-prediction
 - https://www.kaggle.com/frabbisw/facial-age
 - wiki https://data.vision.ee.ethz.ch/cvl/rrothe/imdb-wiki/
 
 ## Data analyze
-we used panda to analyze data and bring the data we need and used face detection algorithms to crop the face from image
+we use panda to analyze data and bring the data out.And crop the images by face detection algorithms 
 
 ## Face Detection
-we used face detecion to recognize face from image and crop the face and save to the folder 
+We use face detection to recognize face from the image and then crop the face and save to the folder 
 
-**in opencv project we have 8 class**
+*In opencv project we have 8 classes*
 - 0-2 years old
 - 4-6 years old
 - 8-12 years old
@@ -29,7 +43,7 @@ we used face detecion to recognize face from image and crop the face and save to
 - 48-53 years old
 - 60-100 years old
 
-**in keras project we have 6 class**
+*In keras project we have 6 classes*
 - 1-5 years old
 - 6-16 years old
 - 17-30 years old
@@ -40,7 +54,6 @@ we used face detecion to recognize face from image and crop the face and save to
 ## Library and widget we use: 
 - panda
 - imutils
-- payfay
 - opencv
 - matplotlib
 - tensorflow
