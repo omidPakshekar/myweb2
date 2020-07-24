@@ -19,7 +19,7 @@ we used panda to analyze data and bring the data we need and used face detection
 ## Face Detection
 we used face detecion to recognize face from image and crop the face and save to the folder 
 
-**in opencv project we have 6 class**
+**in opencv project we have 8 class**
 - 0-2 years old
 - 4-6 years old
 - 8-12 years old
