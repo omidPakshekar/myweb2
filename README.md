@@ -8,24 +8,25 @@
 This project predicts a person's age in a photo or video.
 We wrote two models for this project, one with keras and the other with opencv
 
-## Age_net.caffemodel
+# Age_net.caffemodel
   This is the model that you must download before running AgeDetection_(Using CV) 
   
-## Report File
+# Report File
   https://drive.google.com/file/d/1l42Li3yBtA841ZpT9P6p1kf1QnFc0sZx/view?usp=sharing
 
-## Video(Report)
+# Video(Report)
   https://drive.google.com/file/d/1Cw-KK7q-mIRxlWMbn-ygpfBFsnJFHtl6/view?usp=sharing
   
-## Optional Report
+# Optional Report
   Here are some things that we did but didn't succeed(This is optional to see)
+  https://drive.google.com/file/d/1ZYf_3ldJ2QZ2LyFQdrrxd8YFGpVKu-XF/view?usp=sharing
   
 ## Data
 we combined these four datasets and for imdb we use panda to analyze the data
-- imdb https://data.vision.ee.ethz.ch/cvl/rrothe/imdb-wiki/
-- https://www.kaggle.com/mariafrenti/age-prediction
-- https://www.kaggle.com/frabbisw/facial-age
-- wiki https://data.vision.ee.ethz.ch/cvl/rrothe/imdb-wiki/
+- IMDB     https://data.vision.ee.ethz.ch/cvl/rrothe/imdb-wiki/
+- Kaggele  https://www.kaggle.com/mariafrenti/age-prediction
+- Kaggele  https://www.kaggle.com/frabbisw/facial-age
+- Wiki     https://data.vision.ee.ethz.ch/cvl/rrothe/imdb-wiki/
 
 ## Data analyze
 we use panda to analyze data and bring the data out.And crop the images by face detection algorithms 
