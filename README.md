@@ -8,16 +8,16 @@
 This project predicts a person's age in a photo or video.
 We wrote two models for this project, one with keras and the other with opencv
 
-# Age_net.caffemodel
+## Age_net.caffemodel
   This is the model that you must download before running AgeDetection_(Using CV) 
   
-# Report File
+## Report File
   https://drive.google.com/file/d/1l42Li3yBtA841ZpT9P6p1kf1QnFc0sZx/view?usp=sharing
 
-# Video(Report)
+## Video(Report)
   https://drive.google.com/file/d/1Cw-KK7q-mIRxlWMbn-ygpfBFsnJFHtl6/view?usp=sharing
   
-# Optional Report
+## Optional Report
   Here are some things that we did but didn't succeed(This is optional to see)
   https://drive.google.com/file/d/1ZYf_3ldJ2QZ2LyFQdrrxd8YFGpVKu-XF/view?usp=sharing
   
