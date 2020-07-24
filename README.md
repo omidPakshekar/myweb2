@@ -4,10 +4,6 @@
 - Seyyed Hossein Mirhosseini (960122680028)
 - Omid Pakshekar (960122681009)
 
-# Age Predictor Application 
-This project predicts a person's age in a photo or video.
-We wrote two models for this project, one with keras and the other with opencv
-
 ## Age_net.caffemodel
   This is the model that you must download before running AgeDetection_(Using CV) 
   
