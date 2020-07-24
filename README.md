@@ -6,6 +6,7 @@
 
 ## Age_net.caffemodel
   This is the model that you must download before running AgeDetection_(Using CV) 
+  https://drive.google.com/file/d/1oxxlMNdJFgCOEeZvQAnho6WfGdlJG-e9/view?usp=sharing
   
 ## Report File
   https://drive.google.com/file/d/1l42Li3yBtA841ZpT9P6p1kf1QnFc0sZx/view?usp=sharing
@@ -18,19 +19,19 @@
   https://drive.google.com/file/d/1ZYf_3ldJ2QZ2LyFQdrrxd8YFGpVKu-XF/view?usp=sharing
   
 ## Data
-we combined these four datasets and for imdb we use panda to analyze the data
+We combined these four datasets and for imdb we use panda to analyze the data
 - IMDB     https://data.vision.ee.ethz.ch/cvl/rrothe/imdb-wiki/
-- Kaggele  https://www.kaggle.com/mariafrenti/age-prediction
-- Kaggele  https://www.kaggle.com/frabbisw/facial-age
+- Kaggle  https://www.kaggle.com/mariafrenti/age-prediction
+- Kaggle  https://www.kaggle.com/frabbisw/facial-age
 - Wiki     https://data.vision.ee.ethz.ch/cvl/rrothe/imdb-wiki/
 
 ## Data analyze
-we use panda to analyze data and bring the data out.And crop the images by face detection algorithms 
+We use panda to analyze data and bring the data out.And crop the images by face detection algorithms 
 
 ## Face Detection
 We use face detection to recognize face from the image and then crop the face and save to the folder 
 
-*In opencv project we have 8 classes*
+In opencv project we have 8 classes
 - 0-2 years old
 - 4-6 years old
 - 8-12 years old
@@ -40,7 +41,7 @@ We use face detection to recognize face from the image and then crop the face an
 - 48-53 years old
 - 60-100 years old
 
-*In keras project we have 6 classes*
+In keras project we have 6 classes
 - 1-5 years old
 - 6-16 years old
 - 17-30 years old
